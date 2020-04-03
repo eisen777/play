@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class play_Guess_The_Number {
     private int Random_number = 0;
+
     private int User_number = 0;
     public static int regNumber() {
         System.out.println("Введите число:");
