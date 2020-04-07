@@ -1,8 +1,8 @@
 package registrator;
 
-public class guess_a_number {
+public class PlayGuessTheNumberAMachine {
     private int number;
-    guess_a_number (boolean choice){
+    PlayGuessTheNumberAMachine(boolean choice){
         number = 50;
     }
     int DoGuess(boolean more){

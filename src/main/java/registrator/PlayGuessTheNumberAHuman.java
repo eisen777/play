@@ -2,7 +2,7 @@ package registrator;
 
 import java.util.Scanner;
 
-public class play_Guess_The_Number {
+public class PlayGuessTheNumberAHuman {
     private int Random_number = 0;
 
     private int User_number = 0;
