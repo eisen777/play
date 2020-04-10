@@ -28,9 +28,9 @@ public class RegistrationProcessor {
         System.out.println("Поиграем? Угадать число (1) или Загадать число(2)?");
         if(UserRegistrator.regChange() == 1){
             do {
-                Number = PlayGuessTheNumberAHuman.regNumber();
-                c.Show_random();
-                c.setUser_number(Number);
+               c.Show_random();
+               c.setUser_number();
+
 
             }while (!c.compare());
         }
