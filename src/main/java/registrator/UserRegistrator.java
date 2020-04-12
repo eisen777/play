@@ -3,7 +3,7 @@ package registrator;
 import java.util.Scanner;
 
 public class UserRegistrator {
-    public static boolean checkName(String name) {
+    public static boolean checkName(String name) {//TODO изменить проверку на содержание цифр в имени
         char[] nameArray = name.toCharArray();
         for(char x:nameArray){
             if (x == '0' || x == '1'||  x == '2'||  x == '3' ||  x == '4' ||  x == '5'  ||  x == '6'  ||  x == '7'

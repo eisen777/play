@@ -1,5 +1,7 @@
 package registrator;
 
+import java.util.Scanner;
+
 public class RegistrationProcessor {
     public static void main(String[] args) {
         System.out.println("Добрый день! Пожалуйста, зарегистрируйтесь...");
@@ -27,19 +29,23 @@ public class RegistrationProcessor {
         user.showUserInfo();
         System.out.println("------------------------------------------------");
         System.out.println("Поиграем? Угадать число (1) или Загадать число(2)?");
-        if(UserRegistrator.regChange() == 1){
+        int regChange = new Scanner(System.in).nextInt();
+        if(regChange == 1){
             do {
                c.setUser_number();
 
 
             }while (!c.play());
         }
-        else if (UserRegistrator.regChange() == 2){
-            while (!a.play()){
-                a.start_play(); //TODO разобраться с повторным вводом выбора игры и повторным вызовом цикла
+        else if (regChange == 2){
+            do {
+                a.start_play();
 
 
-           }
+           }while (!a.play());//TODO разобраться с повторным вызовом цикла
+        }
+        else {
+            System.out.println("Введите 1 или 2");
         }
 
 

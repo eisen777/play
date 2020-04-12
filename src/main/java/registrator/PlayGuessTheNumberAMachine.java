@@ -29,7 +29,7 @@ public class PlayGuessTheNumberAMachine {
         String temp = new Scanner(System.in).nextLine();
         if (temp.equals("загадал")){
             System.out.println("Отлично! Я просто уверен, что это число - " + Random_number);
-            play();
+            //play();
         }
         else {
             System.out.println("Просто наишите \"загадал\"");
