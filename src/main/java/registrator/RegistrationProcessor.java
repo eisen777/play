@@ -6,6 +6,7 @@ public class RegistrationProcessor {
         String userName = "";
         int Number = 0;
         PlayGuessTheNumberAHuman c = new PlayGuessTheNumberAHuman();
+        PlayGuessTheNumberAMachine a = new PlayGuessTheNumberAMachine();
         boolean change = true;
         do {
             userName = UserRegistrator.regName();
@@ -28,11 +29,17 @@ public class RegistrationProcessor {
         System.out.println("Поиграем? Угадать число (1) или Загадать число(2)?");
         if(UserRegistrator.regChange() == 1){
             do {
-               c.Show_random();
                c.setUser_number();
 
 
-            }while (!c.compare());
+            }while (!c.play());
+        }
+        else if (UserRegistrator.regChange() == 2){
+            while (!a.play()){
+                a.start_play(); //TODO разобраться с повторным вводом выбора игры и повторным вызовом цикла
+
+
+           }
         }
 
 

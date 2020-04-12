@@ -1,49 +1,51 @@
 package registrator;
 
 import java.util.Scanner;
-import java.lang.*;
+import java.util.Random;
 
-import static java.lang.Math.*;
 
 public class PlayGuessTheNumberAHuman {
-    public void setRandom_number() {
-        Random_number = (int) random();
-    }
+    Random rnd = new Random(System.currentTimeMillis());
+    private final int MAX = 100;
+    private final int MIN = 0;
+    private int Random_number = MIN + rnd.nextInt(MAX - MIN + 1);
 
-    public int getRandom_number() {
-        return Random_number;
-    }
-
-    private int Random_number = 0;
-
-    private int User_number = 0;
+    private int User_number;
 
     public void setUser_number() {
         System.out.println("Введите число:");
-        User_number = new Scanner(System.in).nextInt();
-    }
-
-    public int getUser_number() {
-        if (User_number < 0 | User_number > 100){
-            System.out.println("попробуйте еще раз");
-            this.setUser_number();
+        int temp = new Scanner(System.in).nextInt();
+        if (temp < 0 | temp > 100){
+            System.out.println("введите число в диапазоне от 0 до 100");
+            setUser_number();
         }
-        return User_number;
+        else {
+            User_number = temp;
+        }
     }
 
-    public void Show_random(){
+    public int Show_random(){
 
-        System.out.println(Random_number);
+        return Random_number;
     }
-    public boolean compare(){
-        if (Random_number ==  User_number){
+    public boolean play(){
+        if (User_number == Random_number){
             System.out.println("Ура, Вы угадали");
             return true;
         }
-        else{
-            System.out.println("попробуйте еще!");//TODO сделать больше/меньше
+        else if (User_number > Random_number){
+            System.out.println("Ответ неверный! Число меньше");
+            System.out.println("правильный ответ: " + Show_random());
             return false;
         }
+        else {
+            System.out.println("Ответ неверный! Число больше");
+            System.out.println("правильный ответ: " + Show_random());
+            return false;
+
+        }
+
+
     }
 
 }
