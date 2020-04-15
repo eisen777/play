@@ -42,7 +42,7 @@ public class RegistrationProcessor {
                 a =  new PlayGuessTheNumberAMachine();
 
 
-           }while (a.play());//TODO разобраться с повторным вызовом цикла
+           }while (a.play());
         }
         else {
             System.out.println("Введите 1 или 2");
