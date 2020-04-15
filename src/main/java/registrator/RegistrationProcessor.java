@@ -8,7 +8,7 @@ public class RegistrationProcessor {
         String userName = "";
         int Number = 0;
         PlayGuessTheNumberAHuman c = new PlayGuessTheNumberAHuman();
-        PlayGuessTheNumberAMachine a = new PlayGuessTheNumberAMachine();
+        PlayGuessTheNumberAMachine a;
         boolean change = true;
         do {
             userName = UserRegistrator.regName();
@@ -39,7 +39,7 @@ public class RegistrationProcessor {
         }
         else if (regChange == 2){
             do {
-                a.start_play();
+                a =  new PlayGuessTheNumberAMachine();
 
 
            }while (!a.play());//TODO разобраться с повторным вызовом цикла
