@@ -33,8 +33,6 @@ public class RegistrationProcessor {
         if(regChange == 1){
             do {
                c.setUser_number();
-
-
             }while (!c.play());
         }
         else if (regChange == 2){
@@ -47,11 +45,5 @@ public class RegistrationProcessor {
         else {
             System.out.println("Введите 1 или 2");
         }
-
-
-
-
-
-
     }
 }
