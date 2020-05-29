@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class RegistrationProcessor {
     public static void main(String[] args) {
-        System.out.println("Добрый день! Пожалуйста, зарегистрируйтесь...");
+        System.out.println("Добрый день! Пожалуйста, зарегистрируйтесь...\n в любой моент Вы можете выйти, стоит только написать слово \"выйти\"");
         String userName = "";
         int Number = 0;
         PlayGuessTheNumberAHuman c = new PlayGuessTheNumberAHuman();
