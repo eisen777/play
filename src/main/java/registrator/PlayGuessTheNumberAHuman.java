@@ -3,7 +3,6 @@ package registrator;
 import java.util.Scanner;
 import java.util.Random;
 
-
 public class PlayGuessTheNumberAHuman {
     Random rnd = new Random(System.currentTimeMillis());
     private final int MAX = 100;
@@ -14,7 +13,7 @@ public class PlayGuessTheNumberAHuman {
 
     public void setUser_number() {
         System.out.println("Введите число:");
-        int temp = new Scanner(System.in).nextInt();
+        int temp = UsersInput.Input(new Scanner(System.in).nextInt());
         if (temp < 0 | temp > 100){
             System.out.println("введите число в диапазоне от 0 до 100");
             setUser_number();

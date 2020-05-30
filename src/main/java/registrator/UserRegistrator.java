@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistrator {
-    public static boolean checkName(String name) {//TODO изменить проверку на содержание цифр в имени
+    public static boolean checkName(String name) {
         char[] nameArray = name.toCharArray();
         Pattern pattern = Pattern.compile("[0-9]");
         Matcher matcher = pattern.matcher(name);
@@ -36,7 +36,7 @@ public class UserRegistrator {
     public static String regName() {
 
             System.out.println("Введите имя:");
-            return new Scanner(System.in).nextLine();
+            return UsersInput.Input(new Scanner(System.in).nextLine());
 
 
     }
@@ -54,7 +54,7 @@ public class UserRegistrator {
     public static int regAge() {
         try {
         System.out.println("Введите возраст:");
-        return new Scanner(System.in).nextInt();
+        return UsersInput.Input(new Scanner(System.in).nextInt());
         }catch (InputMismatchException e){
             System.out.println("по-моему Вы немного напутали со своим возрастом, давайте ка еще разок!");
             return UserRegistrator.regAge();

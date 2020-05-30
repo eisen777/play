@@ -8,7 +8,7 @@ public class PlayGuessTheNumberAMachine {
     private int max;
     private int min;
     private int Random_number;
-    public PlayGuessTheNumberAMachine() {
+    public void StartPlay() {
         String temp;
         min = 0;
         max = 100;
@@ -17,7 +17,7 @@ public class PlayGuessTheNumberAMachine {
         System.out.println("просто напишите \"больше\", \"меньше\" или \"правильно\"");
         do {
             System.out.println("Наишите \"загадал\" если готовы начать");
-            temp = new Scanner(System.in).nextLine();
+            temp = UsersInput.Input(new Scanner(System.in).nextLine());
         }while (!temp.equals("загадал"));
         System.out.println("Отлично! Я просто уверен, что это число - " + set_and_get_Random_number());
 
